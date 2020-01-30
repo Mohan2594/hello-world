@@ -479,13 +479,13 @@ def test_Clearcart():
             #break
 
         driver.execute_script("window.scrollBy(0,200);")
-        clearshoppingcart = wait.until(EC.presence_of_element_located((By.XPATH,"//button[@class='action clear']")))
+        clearshoppingcart = wait.until(EC.element_to_be_clickable((By.XPATH,"//button[@class='action clear']")))
         clearshoppingcart.click()
         time.sleep(2)
 
         # driver.find_element_by_xpath("//p/a[text()='here']").click()
         # time.sleep(2)
-        logout = wait.until(EC.presence_of_element_located((By.XPATH,"//li[@class='authorization-link']")))
+        logout = wait.until(EC.element_to_be_clickable((By.XPATH,"//li[@class='authorization-link']")))
         while logout.click() is True:
             break
 
