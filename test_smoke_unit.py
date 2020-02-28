@@ -14,7 +14,7 @@ class TestCaseBrowser(unittest.TestCase):
         wait = WebDriverWait(driver, 10)
         driver.maximize_window()
         driver.get(homePage)
-        driver.implicitly_wait(5)
+        driver.implicitly_wait(10)
         actions = ActionChains(driver)
 
         GU =GuestUser(driver)
